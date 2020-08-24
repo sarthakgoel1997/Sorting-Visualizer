@@ -32,19 +32,19 @@ export default class SortingVisualiser extends React.Component {
                 const [baroneindex,bartwoindex] = animations[i];
                 const baronestyle = arraybars[baroneindex].style;
                 const bartwostyle = arraybars[bartwoindex].style;
-                const color = i%3 === 0 ? 'red' : 'yellow';
+                const color = i%3 === 0 ? 'red' : 'turquoise';
 
                 setTimeout(() => {
                     baronestyle.backgroundColor = color;
                     bartwostyle.backgroundColor = color;
-                }, i*50);
+                }, i*1);
             }
             else{
                 setTimeout(() => {
                     const [baroneindex, newheight] = animations[i];
                     const baronestyle = arraybars[baroneindex].style;
                     baronestyle.height = `${newheight}px`;
-                }, i*50);
+                }, i*1);
             }
         }
     }
